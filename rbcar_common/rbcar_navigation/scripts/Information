@@ -1,0 +1,10 @@
+In this package we can see more developed scripts by my side for various applications using ros concepts.
+
+1. Ros services for appliying emergency braking and relesing emergency braking
+start_vehicle_service.py and stop_vehicle_service.py
+
+2. ROS actions for moving the robot for particular target pose using actions
+go_to_target.py
+
+3. ROS statemachines for multiple way point navigation.
+pysmach.py

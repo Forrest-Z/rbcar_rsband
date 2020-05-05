@@ -1,0 +1,30 @@
+base_local_planner: rsband_local_planner/RSBandPlannerROS
+
+
+rsband:
+
+#common params
+  rear_steering_mode: 0
+  stop: False
+  max_speed: 2.0
+  max_steering_angle: 0.4
+  wheelbase: 0.4
+  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.8
+  update_sub_goal_dist_threshold: 0.4
+  emergency_planning: True
+
+
+#state_checking_mode
+  eband_to_rs_strategy: 1
+  state_checking_mode: 0
+  max_planning_duration: 0.1
+  interpolation_num_poses: 5
+  robot_state_valid: True
+  valid_state_max_cost: 252
+  
+
+# car like fuzzy path tracking controller parameters
+  goal_dist_threshold: 0.2
+  lateral_deviation_tolerance: 0.1
+  display_controller_io: False

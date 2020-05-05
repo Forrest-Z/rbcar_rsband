@@ -1,0 +1,42 @@
+# rsband_local_planner
+The rsband_local_planner combines an **elastic band planner**, a **reeds shepp planner** and a
+**fuzzy logic based path tracking controller**, to achieve reactive local planning for Car-Like
+robots with Ackermann or 4-Wheel-Steering.
+
+Here, **reeds shepp planner** helps to generate a feasible kinodynamic trajectory between two points(start and end points).
+ **elastic band planner** also generate the elastical trajectory between two points which will expands whenever obstracle comes near it and constrast when obstacle for from it.
+ **fuzzy logic based path tracking controller** helps to tracking the path between two points simillar to purepersuit by writting various logical factors.
+
+
+
+#### Installation of rsband_local_planner is an tricky work
+1. First create workspace folder and src folder, install the rs_band_localplanner package inside the src folder. (https://github.com/gkouros/rsband_local_planner)
+
+2. Need to be install fuzzylite Dependencies, so inside workspace folder follow below steps
+#### How to install fuzzylite
+```
+$ git clone git@github.com:fuzzylite/fuzzylite.git
+$ cd fuzzylite/fuzzylite
+$ git checkout fuzzylite-6.x
+$ mkdir build && cd build
+$ cmake ..
+$ make
+$ sudo make install
+```
+
+3. Need to be install OMPL Dependencies, so inside workspace folder below step or link
+https://github.com/ompl/ompl
+
+4. Need to be install eband_local_planner pkg, so inside workspace src folder install eband_local_planner
+https://github.com/utexas-bwi/eband_local_planner
+
+
+
+
+
+#### Important Dependencies
+- [eband_local_planner](https://github.com/utexas-bwi/eband_local_planner): Elastic Band Algorithm implementation used to dynamically deform the global path
+- [OMPL](https://github.com/ompl/ompl): Motion planning library, that contains a Reeds-Shepp State Space used in the Reeds-Shepp Path Planner
+- [fuzzylite](https://github.com/fuzzylite/fuzzylite):  Fuzzy logic control library, used in the fuzzy path tracking controller
+
+
